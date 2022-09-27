@@ -7,3 +7,11 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+describe('App', () => {
+  test('renders todo grid component', () => {
+    render(<App />);
+    const todoGridComponent = screen.getByText(/Todos/i)
+    expect(todoGridComponent).toBeInTheDocument();
+  })
+})
